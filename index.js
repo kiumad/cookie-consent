@@ -34,6 +34,7 @@ const removeThirdPartyCookies = () => {
 };
 
 const addCookieConsentModal = (container) => {
+  console.log("container: ", container);
   const Wrapper = document.createElement("div");
   Wrapper.style =
     "width: 100%; max-width: 400px; background-color: white; position: fixed; bottom: 6px; right: 12px; z-index: 9999999999999999999999999999; padding: 20px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);direction: rtl;border-radius: 6px";
