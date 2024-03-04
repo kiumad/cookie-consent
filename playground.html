@@ -4,14 +4,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- third party cookie -->
         <script src="https://cdn.jsdelivr.net/gh/kiumad/cookie-consent@new2/index.js"></script>
-        <title>playground</title>
-    </head>
-
-    <body>
-        <div class="test"></div>
-
-
+        <!-- the website main script, that's set cookie -->
         <script>
             document.addEventListener("DOMContentLoaded", () => {
                 const Cookie = (name, value, days) => {
@@ -24,6 +19,15 @@
                 Cookie('test1', 'vbbb', 52)
             })
         </script>
+        <!-- yektanet cookie consent -->
+        <script src="https://cdn.jsdelivr.net/gh/kiumad/cookie-consent@new2/index.js"></script>
+        <title>playground</title>
+    </head>
+
+    <body>
+        <div class="test">
+            <h1>test website :)</h1>
+        </div>
     </body>
 
 </html>
