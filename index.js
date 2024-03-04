@@ -119,7 +119,7 @@ cookieStore.addEventListener("change", () => {
 
 // TODO: Write code for find the first child of body
 // to can append child to it
-const container = document.body;
+const container = document.body.childNodes[0];
 
 setTimeout(() => {
   addCookieConsentModal(container);
