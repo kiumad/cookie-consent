@@ -4,12 +4,20 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://cdn.jsdelivr.net/gh/kiumad/cookie-consent@new/index.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/kiumad/cookie-consent@new2/index.js"></script>
         <title>playground</title>
     </head>
 
     <body>
         <div class="test"></div>
+
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                console.log('doc loaded')
+                document.cookie = "username=John Doe; expires=Thu, 18 Dec 2013 12:00:00 UTC";
+            })
+        </script>
     </body>
 
 </html>
