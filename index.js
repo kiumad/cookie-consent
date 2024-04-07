@@ -52,13 +52,17 @@ document.addEventListener("DOMContentLoaded", () => {
     let cookiesBlockList = window.localStorage.getItem(ITEM_KEY);
     cookiesBlockList = cookiesBlockList && JSON.parse(cookiesBlockList);
 
-    for (let i = 0; i < cookiesBlockList.length; i++) {
-      console.log(
-        "from removeBlockedCookies: ",
-        cookiesBlockList[i],
-        " removed !"
-      );
-      document.cookie = `${cookiesBlockList[i]}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+    if (cookiesBlockList) {
+      for (let i = 0; i < cookiesBlockList.length; i++) {
+        console.log(
+          "from removeBlockedCookies: ",
+          cookiesBlockList[i],
+          " removed !"
+        );
+        document.cookie = `${cookiesBlockList[i]}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+      }
+    } else {
+      console.log("no have cookies !");
     }
   };
 
