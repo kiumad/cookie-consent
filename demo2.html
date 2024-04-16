@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
+        <!-- <script src="https://unpkg.com/consent-manager@1/dist/consent-manager.min.js"></script> -->
+        <!-- <link rel="preconnect" href="https://cdn.jsdelivr.net"> -->
+        <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+        <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+        <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"> -->
+        <!-- <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@lmc-eu/cookie-consent-manager@2/LmcCookieConsentManager.min.css"> -->
+        <!-- third party cookie -->
+        <script src="https://cdn.jsdelivr.net/gh/kiumad/third-party-cookie@new2/index.js"></script>
+        <!-- yektanet script -->
+        <script id="ua-script-UszIh9gp" data-analyticsobject="yektanet" async="" type="text/javascript"
+            src="https://cdn.yektanet.com/rg_woebegone/scripts_v3/UszIh9gp/rg.complete.js?v=2024020501"></script>
+        <!-- mediaad script -->
+        <script type="text/javascript" async="" src="https://s1.mediaad.org/serve/akharinkhabar.ir/loader.js"></script>
+        <!-- the website main script, that's set cookie -->
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const Cookie = (name, value, days) => {
+                    const date = new Date();
+                    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+                    const expires = "expires=" + date.toUTCString();
+                    document.cookie = name + "=" + value + "; " + expires + "; path=/";
+                };
+
+                Cookie('test1', 'vbbb', 52)
+            })
+        </script>
+        <!-- yektanet cookie consent -->
+        <script src="./demo2.js"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/gh/kiumad/cookie-consent@new2/index.js"></script> -->
+        <script>
+
+
+            // Function to block third-party cookies
+            function blockThirdPartyCookies() {
+                // Check if consent is given
+                // if (!checkConsent()) {
+                // If consent is not given, block third-party cookies
+                document.cookie = "sameSite=Strict"; // Set sameSite attribute to Strict for cookies
+                // You might also want to remove any existing third-party cookies
+                // Replace 'example.com' with the domain of the third-party you want to block
+                document.cookie = "mohamad=dd; expires=Thu, 01 Jan 2025 00:00:00 UTC; domain=/; path=/; secure=false";
+                // }
+            }
+
+
+            blockThirdPartyCookies()
+        </script>
+        <script defer src="https://cdn.jsdelivr.net/npm/@lmc-eu/cookie-consent-manager@2/init.js"></script>
+
+        <style>
+            * {
+                font-family: "Vazirmatn", sans-serif;
+                font-optical-sizing: auto;
+                font-style: normal;
+                direction: rtl;
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+
+        <title>playground</title>
+    </head>
+
+    <body>
+        <div class="test">
+            <h1>نمونه اول بدون reject</h1>
+        </div>
+        <script>
+            window.addEventListener('DOMContentLoaded', function () {
+                initLmcCookieConsentManager('demo.example'); // use the name of your service, like jobs.cz, seduo.pl etc.
+            });
+        </script>
+    </body>
+
+</html>

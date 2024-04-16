@@ -263,7 +263,7 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("container: ", container);
     const Wrapper = document.createElement("div");
     Wrapper.style =
-      "width: 100%; max-width: 400px; background-color: white; position: fixed; bottom: 6px; right: 12px; z-index: 9999999999999999999999999999; padding: 20px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);direction: rtl;border-radius: 6px";
+      "width: auto; background-color: #ededed; position: absolute; bottom: 0px; right: 0; z-index: 9999999999999999999999999999; padding: 24px;direction: rtl;border-radius: 6px;    display: flex;align-items: center;flex-direction: row;justify-content: space-between;gap: 20px";
     Wrapper.classList = "cookie-consent-modal";
 
     const closeIcon = document.createElement("span");
@@ -273,22 +273,10 @@ document.addEventListener("DOMContentLoaded", () => {
       Wrapper.style.display = "none";
     };
 
-    const titleRow = document.createElement("div");
-    titleRow.style =
-      "display: flex;justify-content: flex-end;align-items: center;margin-bottom: 10px;gap: 15px;flex-direction: row-reverse;";
-
-    const title = document.createElement("h3");
-    title.innerText = "سفر بهتر با کوکی‌ها";
-    title.style = "font-size: 18px;font-weight: bold;color: black;";
-
-    titleRow.appendChild(title);
-    titleRow.appendChild(closeIcon);
-
     const description = document.createElement("p");
     description.innerText =
       "این وب سایت cookieها را جمع آوری می‌کند تا تجربه کاربری بهتری ارائه دهد. از صفحه سیاست حفظ حریم خصوصی ما بازدید کنید.";
-    description.style =
-      "font-size: 15px;margin-bottom: 20px;font-family: inherit;color: gray;";
+    description.style = "font-size: 15px;font-family: inherit;color: gray;";
 
     const footer = document.createElement("div");
     footer.style =
@@ -318,9 +306,8 @@ document.addEventListener("DOMContentLoaded", () => {
     detailButton.onclick = openDetailModal;
 
     footer.appendChild(rejectButton);
-    footer.appendChild(detailButton);
+    // footer.appendChild(detailButton);
 
-    Wrapper.appendChild(titleRow);
     Wrapper.appendChild(description);
     Wrapper.appendChild(footer);
 
